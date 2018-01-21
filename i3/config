@@ -171,12 +171,16 @@ bindsym $mod+r mode "resize"
 #}
 
 for_window [class="^.*"] border pixel 0
-gaps inner 30
+
+gaps inner 55
 gaps outer 3
 
 # exec --no-startup-id feh --bg-scale /home/silver/Wallpapers/lighthouse.jpg
 # exec --no-startup-id feh --bg-scale /home/silver/Pictures/80-s-City.jpg
-exec --no-startup-id feh --bg-scale /home/silver/Wallpapers/eclipse.jpg
+# exec --no-startup-id feh --bg-scale /home/silver/Wallpapers/eclipse.jpg
+# exec --no-startup-id feh --bg-scale /home/silver/Wallpapers/hollywood.jpg
+
+exec --no-startup-id feh --bg-scale /home/silver/Wallpapers/dunes.png
 
 exec synclient TapButton1=0 TapButton2=0 TapButton3=0
 
@@ -189,7 +193,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # Using light instad of xbacklight, can be found here:
 # https://github.com/haikarainen/light.git
 bindsym XF86MonBrightnessUp exec light -A 10 # increases the brighhtness
-bindsym XF86MonBrightnessDown exec light -U 10 # decreases the brightness 
+bindsym XF86MonBrightnessDown exec light -U 10 # decreases the brightness
 
 
 # Touchpad controls
@@ -201,8 +205,9 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Starts Compton
-exec --no-startup-id "compton -bfGr --config ~/.config/compton/compton.conf"
 
-# Starts Polybar 
+# Starts Polybar
 exec --no-startup-id "sh ~/.config/polybar/launch.sh"
+
+# Starts Compton 
+exec --no-startup-id "compton -bfG --config ~/.config/compton/compton.conf" 

@@ -5,13 +5,19 @@
 
 [global/wm]
 margin-top = 5
-margin-bottom = 5
+margin-bottom = 10 
 
 [bar/bar]
 monitor = eDP-1-1
-width = 100%
+;width = 100%
+width = 98% 
 height = 25
+
+offset-x = 20
 fixed-center = true
+
+override-redirect = true 
+wm-restack = i3
 
 ;Semi-transparent hexcodes use 8 digits: first two specity opacity, last 
 ;six specify the base color
@@ -24,7 +30,7 @@ padding-left = 0
 padding-right = 2
 module-margin-left = 2
 module-margin-right = 1
-offset-y = 10
+offset-y = 7 
 
 ;Top border in order to make the bar contents centered in the bar 
 border-top-size = 3
